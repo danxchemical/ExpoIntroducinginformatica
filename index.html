@@ -152,8 +152,9 @@
   .member-card:hover::before { opacity: 1; }
 
   .member-card[data-member="gabriel"] { --card-color: #00e5ff; }
+  .member-card[data-member="camiloc"] { --card-color: #f472b6; }
   .member-card[data-member="fredy"]   { --card-color: #7c3aed; }
-  .member-card[data-member="camilo"]  { --card-color: #f59e0b; }
+  .member-card[data-member="camilom"] { --card-color: #f59e0b; }
   .member-card[data-member="libardo"] { --card-color: #10b981; }
 
   .member-num {
@@ -829,27 +830,33 @@
   <p class="home-sub">Mercado Laboral Regional, Nacional e Internacional</p>
   <p class="home-inst">Instituto Universitario de la Paz · 2025</p>
 
-  <div class="team-grid">
+  <div class="team-grid" style="grid-template-columns: repeat(2,1fr); max-width:700px;">
     <div class="member-card" data-member="gabriel" onclick="goPresenter('gabriel')">
       <div class="member-num">01 · EXPOSITOR</div>
       <div class="member-name">Gabriel Sanabria</div>
-      <div class="member-role">Perfil Profesional & Ocupacional</div>
+      <div class="member-role">Presentación & Introducción</div>
+      <span class="member-arrow">→</span>
+    </div>
+    <div class="member-card" data-member="camiloc" onclick="goPresenter('camiloc')">
+      <div class="member-num">02 · EXPOSITOR</div>
+      <div class="member-name">Camilo Contreras</div>
+      <div class="member-role">Visión & Misión del Ing. Informático</div>
       <span class="member-arrow">→</span>
     </div>
     <div class="member-card" data-member="fredy" onclick="goPresenter('fredy')">
-      <div class="member-num">02 · EXPOSITOR</div>
-      <div class="member-name">Fredy Alexander</div>
+      <div class="member-num">03 · EXPOSITOR</div>
+      <div class="member-name">Fredy Quintero</div>
+      <div class="member-role">Ing. Informático a Nivel Nacional</div>
+      <span class="member-arrow">→</span>
+    </div>
+    <div class="member-card" data-member="camilom" onclick="goPresenter('camilom')">
+      <div class="member-num">04 · EXPOSITOR</div>
+      <div class="member-name">Camilo Mendoza</div>
       <div class="member-role">Mercado Laboral Regional</div>
       <span class="member-arrow">→</span>
     </div>
-    <div class="member-card" data-member="camilo" onclick="goPresenter('camilo')">
-      <div class="member-num">03 · EXPOSITOR</div>
-      <div class="member-name">Camilo Mendoza</div>
-      <div class="member-role">Mercado Laboral Nacional</div>
-      <span class="member-arrow">→</span>
-    </div>
-    <div class="member-card" data-member="libardo" onclick="goPresenter('libardo')">
-      <div class="member-num">04 · EXPOSITOR</div>
+    <div class="member-card" data-member="libardo" onclick="goPresenter('libardo')" style="grid-column: 1/-1; max-width:340px; margin:0 auto; width:100%;">
+      <div class="member-num">05 · EXPOSITOR</div>
       <div class="member-name">Libardo Torres</div>
       <div class="member-role">Mercado Internacional & Conclusiones</div>
       <span class="member-arrow">→</span>
@@ -949,29 +956,103 @@ const presenters = {
     color: '#00e5ff',
     slides: [
       {
-        tag: 'Introducción',
-        title: 'Perfil Profesional del Ingeniero Informático',
+        tag: 'Presentación',
+        title: 'Bienvenidos: ¿De qué vamos a hablar hoy?',
         content: `
-          <p class="slide-text">El <strong>Ingeniero Informático de UNIPAZ</strong> es un profesional formado para diseñar, implementar, implantar, asesorar y gerenciar proyectos de Tecnología de la Información (TI).</p>
+          <p class="slide-text">Hoy les presentamos el <strong>Perfil del Ingeniero Informático de UNIPAZ</strong>: quién es, qué hace, y cómo puede transformar una región, un país y hasta trabajar para el mundo desde Colombia.</p>
           <div class="info-grid">
             <div class="info-box">
-              <div class="info-box-title">🎯 Enfoque Central</div>
-              <div class="info-box-text">Búsqueda del desarrollo e innovación organizacional a través de la TI</div>
+              <div class="info-box-title">👨‍💻 ¿Qué es un Ing. Informático?</div>
+              <div class="info-box-text">Un profesional que diseña, implementa y gerencia soluciones tecnológicas para resolver problemas reales</div>
             </div>
             <div class="info-box">
-              <div class="info-box-title">⚖️ Responsabilidad</div>
-              <div class="info-box-text">Disciplinar, social y ética como pilares de su ejercicio profesional</div>
+              <div class="info-box-title">🎯 ¿Por qué es importante?</div>
+              <div class="info-box-text">Porque vivimos en la era digital: toda empresa, entidad pública y organización necesita tecnología para funcionar</div>
             </div>
             <div class="info-box">
-              <div class="info-box-title">🌐 Contexto</div>
-              <div class="info-box-text">Articula condiciones políticas, legislativas, socioeconómicas, técnicas y ambientales</div>
+              <div class="info-box-title">📍 ¿Dónde impacta?</div>
+              <div class="info-box-text">En lo regional (Magdalena Medio), nacional (Colombia) e internacional (trabajo remoto al mundo)</div>
             </div>
           </div>
         `
       },
       {
+        tag: 'Introducción',
+        title: 'El Ingeniero Informático de UNIPAZ',
+        content: `
+          <p class="slide-text">El programa de Ingeniería Informática del <strong>Instituto Universitario de la Paz (UNIPAZ)</strong> forma profesionales integrales listos para enfrentar los retos del mercado TI.</p>
+          <div class="info-grid">
+            <div class="info-box">
+              <div class="info-box-title">🏫 La Institución</div>
+              <div class="info-box-text">UNIPAZ es el Instituto Universitario de la Paz, ubicado en Barrancabermeja, Santander. Forma profesionales comprometidos con el desarrollo regional</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-title">💡 TI = Tecnología de la Información</div>
+              <div class="info-box-text">El campo que abarca el uso de computadores, software, redes y sistemas para gestionar y procesar información en organizaciones</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-title">🌐 Alcance del programa</div>
+              <div class="info-box-text">Prepara ingenieros capaces de trabajar desde el nivel local hasta el mercado global, con sólidas bases técnicas y éticas</div>
+            </div>
+          </div>
+          <p class="slide-text" style="margin-top:20px; font-size:14px; opacity:0.7;">📌 A continuación conoceremos la visión, misión y perfil profesional que define a este ingeniero.</p>
+        `
+      }
+    ]
+  },
+
+  camiloc: {
+    name: 'Camilo Contreras',
+    color: '#f472b6',
+    slides: [
+      {
+        tag: 'Visión & Misión',
+        title: 'Misión del Ing. Informático de UNIPAZ',
+        content: `
+          <p class="slide-text">La <strong>misión</strong> define el propósito del Ingeniero Informático: el "para qué" de su formación profesional.</p>
+          <div class="info-grid">
+            <div class="info-box">
+              <div class="info-box-title">🎯 Propósito Central</div>
+              <div class="info-box-text">Formar profesionales integrales con responsabilidad disciplinar, social y ética, comprometidos con el desarrollo e innovación regional y nacional</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-title">⚙️ ¿Qué hace?</div>
+              <div class="info-box-text">Diseña, implementa, implanta, asesora y gerencia proyectos de Tecnología de la Información (TI)</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-title">🌍 Contexto que articula</div>
+              <div class="info-box-text">Condiciones políticas, legislativas, socioeconómicas, técnicas y ambientales del entorno donde opera</div>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: 'Visión UNIPAZ',
+        title: 'Visión 2031: Liderazgo Tecnológico Regional',
+        content: `
+          <p class="slide-text">La <strong>visión</strong> marca el horizonte hacia donde se dirige el programa de Ingeniería Informática de UNIPAZ.</p>
+          <div class="stat-row">
+            <div class="stat-box" style="border-color:rgba(244,114,182,0.4);">
+              <div class="stat-num" style="color:#f472b6;">2031</div>
+              <div class="stat-label">Año en que UNIPAZ busca consolidarse como líder regional en formación tecnológica</div>
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-box">
+              <div class="info-box-title">🏆 Objetivo de Liderazgo</div>
+              <div class="info-box-text">Consolidarse como institución líder en formación tecnológica regional a nivel del Magdalena Medio</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-title">🔬 Generación de Propuestas</div>
+              <div class="info-box-text">Generar propuestas de diseño e implementación de proyectos TI para el mejoramiento continuo del sector productivo y social</div>
+            </div>
+          </div>
+          <p class="slide-text" style="margin-top:20px; font-size:14px; opacity:0.7;">📌 Esta visión no es un sueño lejano: está respaldada por la creciente demanda de ingenieros informáticos en la región.</p>
+        `
+      },
+      {
         tag: 'Perfil Ocupacional',
-        title: 'Campos de Ejercicio Profesional',
+        title: 'Los 5 Campos de Ejercicio Profesional',
         content: `
           <ul class="role-list">
             <li class="role-item">
@@ -992,7 +1073,7 @@ const presenters = {
               <div class="role-icon">🖥️</div>
               <div class="role-body">
                 <div class="role-title">Gerente de Operaciones</div>
-                <div class="role-desc">Gestiona la infraestructura TI: hardware, redes, comunicaciones y sistemas de información para garantizar una adecuada prestación del servicio</div>
+                <div class="role-desc">Gestiona la infraestructura TI: hardware, redes, comunicaciones y sistemas de información para garantizar la adecuada prestación del servicio</div>
               </div>
             </li>
             <li class="role-item">
@@ -1016,14 +1097,88 @@ const presenters = {
   },
 
   fredy: {
-    name: 'Fredy Alexander',
+    name: 'Fredy Quintero',
     color: '#7c3aed',
     slides: [
       {
-        tag: 'Mercado Laboral Regional',
+        tag: 'Nivel Nacional',
+        title: 'Colombia: Ecosistema TI en Expansión',
+        content: `
+          <p class="slide-text">Colombia se posiciona como uno de los destinos tecnológicos más atractivos de Latinoamérica, con un mercado TI en pleno crecimiento.</p>
+          <div class="stat-row">
+            <div class="stat-box">
+              <div class="stat-num">$6B</div>
+              <div class="stat-label">Tamaño del sector TI colombiano en USD</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">120K</div>
+              <div class="stat-label">Vacantes TI sin cubrir al año en Colombia</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">12%</div>
+              <div class="stat-label">Crecimiento anual del sector</div>
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-box">
+              <div class="info-box-title">🏙️ Ciudades Clave</div>
+              <div class="info-box-text">Bogotá, Medellín, Cali y Barranquilla lideran la demanda TI. Medellín: "Silicon Valley" colombiano (Valle del Software)</div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-title">🏢 Sectores que Contratan</div>
+              <div class="info-box-text">Fintech, salud digital, e-commerce, consultoría tecnológica, telecomunicaciones y gobierno digital</div>
+            </div>
+          </div>
+        `
+      },
+      {
+        tag: 'Roles Nacionales',
+        title: 'Roles Más Demandados y Sus Salarios',
+        content: `
+          <ul class="role-list">
+            <li class="role-item">
+              <div class="role-icon">🛡️</div>
+              <div class="role-body">
+                <div class="role-title">Especialista en Ciberseguridad — $5–8M COP/mes</div>
+                <div class="role-desc">Demanda crítica por ataques cibernéticos crecientes a entidades públicas y privadas colombianas</div>
+              </div>
+            </li>
+            <li class="role-item">
+              <div class="role-icon">📊</div>
+              <div class="role-body">
+                <div class="role-title">Científico de Datos / IA — $6–10M COP/mes</div>
+                <div class="role-desc">El auge de la inteligencia artificial generativa multiplica la demanda de perfiles analíticos</div>
+              </div>
+            </li>
+            <li class="role-item">
+              <div class="role-icon">☁️</div>
+              <div class="role-body">
+                <div class="role-title">Arquitecto Cloud — $7–12M COP/mes</div>
+                <div class="role-desc">AWS, Azure y GCP dominan la transformación empresarial colombiana. El más alto salario nacional</div>
+              </div>
+            </li>
+            <li class="role-item">
+              <div class="role-icon">🗄️</div>
+              <div class="role-body">
+                <div class="role-title">DBA / Ingeniero de Datos — $4–7M COP/mes</div>
+                <div class="role-desc">Alta demanda en fintech, retail y sector salud para gestión de Big Data</div>
+              </div>
+            </li>
+          </ul>
+        `
+      }
+    ]
+  },
+
+  camilom: {
+    name: 'Camilo Mendoza',
+    color: '#f59e0b',
+    slides: [
+      {
+        tag: 'Mercado Regional',
         title: 'Oportunidades en el Magdalena Medio',
         content: `
-          <p class="slide-text">El entorno regional del Magdalena Medio presenta una demanda creciente de profesionales TI, impulsada por la transformación digital de sectores tradicionales.</p>
+          <p class="slide-text">El Magdalena Medio presenta una demanda creciente de profesionales TI, impulsada por la transformación digital de sectores tradicionales.</p>
           <div class="stat-row">
             <div class="stat-box">
               <div class="stat-num">↑ 35%</div>
@@ -1051,101 +1206,25 @@ const presenters = {
         `
       },
       {
-        tag: 'Mercado Regional',
-        title: 'Misión y Compromiso con la Región',
+        tag: 'Regional — Barrancabermeja',
+        title: 'Barrancabermeja: Hub Tecnológico Emergente',
         content: `
-          <p class="slide-text">UNIPAZ forma profesionales comprometidos con el desarrollo regional desde su campo disciplinar.</p>
+          <p class="slide-text">Nuestra ciudad no es solo el corazón petrolero del país: está emergiendo como un polo de desarrollo tecnológico regional.</p>
           <div class="info-grid">
             <div class="info-box">
-              <div class="info-box-title">📍 Barrancabermeja</div>
-              <div class="info-box-text">Hub tecnológico emergente: startups, centros de datos, y expansión de servicios digitales para la industria energética</div>
+              <div class="info-box-title">⚡ Hub Tecnológico</div>
+              <div class="info-box-text">Startups, centros de datos y expansión de servicios digitales ligados a la industria energética convierten a Barrancabermeja en referente TI regional</div>
             </div>
             <div class="info-box">
-              <div class="info-box-title">🌾 Área Rural</div>
-              <div class="info-box-text">Tecnologías para agro: sistemas de riego inteligente, trazabilidad de cultivos, y conectividad rural</div>
+              <div class="info-box-title">🌾 Tecnología para el Agro</div>
+              <div class="info-box-text">Sistemas de riego inteligente, trazabilidad de cultivos y conectividad rural abren un mercado enorme en el área rural del Magdalena Medio</div>
             </div>
             <div class="info-box">
-              <div class="info-box-title">📚 Educación</div>
-              <div class="info-box-text">Colegios e instituciones educativas requieren coordinadores TI y plataformas de aprendizaje digital</div>
+              <div class="info-box-title">📚 Sector Educación</div>
+              <div class="info-box-text">Colegios e instituciones educativas requieren coordinadores TI y plataformas de aprendizaje digital, una oportunidad directa para egresados de UNIPAZ</div>
             </div>
           </div>
-          <p class="slide-text" style="margin-top:24px; font-size:15px; opacity:0.7;">
-            📌 Visión UNIPAZ 2031: Consolidarse como líder en formación tecnológica regional, generando propuestas de diseño e implementación de proyectos TI para el mejoramiento continuo del sector productivo y social.
-          </p>
-        `
-      }
-    ]
-  },
-
-  camilo: {
-    name: 'Camilo Mendoza',
-    color: '#f59e0b',
-    slides: [
-      {
-        tag: 'Mercado Laboral Nacional',
-        title: 'Colombia: Ecosistema TI en Expansión',
-        content: `
-          <p class="slide-text">Colombia se posiciona como uno de los destinos tecnológicos más atractivos de Latinoamérica, con un mercado TI en plena ebullición.</p>
-          <div class="stat-row">
-            <div class="stat-box">
-              <div class="stat-num">$6B</div>
-              <div class="stat-label">Tamaño del sector TI colombiano en USD</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-num">120K</div>
-              <div class="stat-label">Vacantes TI sin cubrir al año en Colombia</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-num">12%</div>
-              <div class="stat-label">Crecimiento anual del sector</div>
-            </div>
-          </div>
-          <div class="info-grid">
-            <div class="info-box">
-              <div class="info-box-title">🏙️ Ciudades Clave</div>
-              <div class="info-box-text">Bogotá, Medellín, Cali y Barranquilla lideran la demanda TI. "Silicon Valley" colombiano: el Valle del Sofware en Medellín</div>
-            </div>
-            <div class="info-box">
-              <div class="info-box-title">🏢 Sectores que Contratan</div>
-              <div class="info-box-text">Fintech, salud digital, e-commerce, consultoría tecnológica, telecomunicaciones y gobierno digital</div>
-            </div>
-          </div>
-        `
-      },
-      {
-        tag: 'Nacional',
-        title: 'Roles Más Demandados en Colombia',
-        content: `
-          <ul class="role-list">
-            <li class="role-item">
-              <div class="role-icon">🛡️</div>
-              <div class="role-body">
-                <div class="role-title">Especialista en Ciberseguridad</div>
-                <div class="role-desc">Salario promedio: $5–8M COP. Demanda crítica por ataques cibernéticos crecientes a entidades públicas y privadas</div>
-              </div>
-            </li>
-            <li class="role-item">
-              <div class="role-icon">📊</div>
-              <div class="role-body">
-                <div class="role-title">Científico de Datos / IA</div>
-                <div class="role-desc">Salario promedio: $6–10M COP. El auge de IA generativa multiplica la demanda de perfiles analíticos</div>
-              </div>
-            </li>
-            <li class="role-item">
-              <div class="role-icon">☁️</div>
-              <div class="role-body">
-                <div class="role-title">Arquitecto Cloud</div>
-                <div class="role-desc">Salario promedio: $7–12M COP. AWS, Azure y GCP dominan la transformación empresarial colombiana</div>
-              </div>
-            </li>
-            <li class="role-item">
-              <div class="role-icon">🗄️</div>
-              <div class="role-body">
-                <div class="role-title">DBA / Ingeniero de Datos</div>
-                <div class="role-desc">Salario promedio: $4–7M COP. Alta demanda en fintech, retail y sector salud para gestión de Big Data</div>
-              </div>
-            </li>
-          </ul>
+          <p class="slide-text" style="margin-top:20px; font-size:14px; opacity:0.7;">📌 Visión UNIPAZ 2031: consolidarse como líder en formación tecnológica regional generando propuestas TI para el sector productivo y social.</p>
         `
       }
     ]
@@ -1175,24 +1254,24 @@ const presenters = {
           <div id="tab-eeuu" class="market-panel">
             <div class="stat-row">
               <div class="stat-box"><div class="stat-num">$5–9K</div><div class="stat-label">Salario mensual USD en EEUU (remoto desde Colombia)</div></div>
-              <div class="stat-box"><div class="stat-num">Toptal / Deel</div><div class="stat-label">Plataformas para talentos globales</div></div>
+              <div class="stat-box"><div class="stat-num">1.2M</div><div class="stat-label">Déficit de ingenieros TI en Norteamérica</div></div>
             </div>
-            <p class="slide-text" style="font-size:14px;">El mercado norteamericano tiene un déficit de más de 1.2 millones de ingenieros TI. El inglés técnico y certificaciones como AWS, Google Cloud o CompTIA abren las puertas.</p>
+            <p class="slide-text" style="font-size:14px;">Plataformas Toptal y Deel conectan talentos globales. El inglés técnico y certificaciones como AWS, Google Cloud o CompTIA abren las puertas.</p>
           </div>
           <div id="tab-europa" class="market-panel">
             <div class="stat-row">
               <div class="stat-box"><div class="stat-num">€3–7K</div><div class="stat-label">Salario mensual en Europa (presencial)</div></div>
               <div class="stat-box"><div class="stat-num">España/Alemania</div><div class="stat-label">Destinos más accesibles</div></div>
             </div>
-            <p class="slide-text" style="font-size:14px;">España facilita visas para talento hispanohablante. Alemania, con alta demanda de ingenieros, ofrece la "Oportunity Card" para profesionales TI. Portugal emerge como hub tech europeo.</p>
+            <p class="slide-text" style="font-size:14px;">España facilita visas para talento hispanohablante. Alemania ofrece la "Opportunity Card" para profesionales TI. Portugal emerge como hub tech europeo.</p>
           </div>
         `
       },
       {
-        tag: 'Tendencias Globales',
-        title: 'Las Habilidades del Futuro',
+        tag: 'Habilidades del Futuro',
+        title: 'Las 4 Competencias Más Cotizadas Globalmente',
         content: `
-          <p class="slide-text">El mercado global exige un profesional que combine el perfil técnico de UNIPAZ con competencias emergentes de alto impacto.</p>
+          <p class="slide-text">El mercado global exige combinar el perfil técnico de UNIPAZ con competencias emergentes de alto impacto.</p>
           <div class="info-grid">
             <div class="info-box">
               <div class="info-box-title">🤖 Inteligencia Artificial</div>
@@ -1208,35 +1287,32 @@ const presenters = {
             </div>
             <div class="info-box">
               <div class="info-box-title">🌍 Soft Skills Globales</div>
-              <div class="info-box-text">Inglés técnico, comunicación remota efectiva y gestión ágil (Scrum/Kanban) son indispensables</div>
+              <div class="info-box-text">Inglés técnico, comunicación remota efectiva y gestión ágil (Scrum/Kanban) son indispensables para trabajar con equipos internacionales</div>
             </div>
           </div>
         `
       },
       {
         tag: 'Conclusión',
-        title: 'El Futuro es Tuyo',
+        title: 'El Futuro Es Tuyo',
         content: `
-          <p class="slide-text">El Ingeniero Informático de UNIPAZ cuenta con un perfil sólido y versátil que le permite competir en cualquier nivel del mercado laboral.</p>
+          <p class="slide-text">El Ingeniero Informático de UNIPAZ tiene un perfil sólido y versátil para competir en cualquier nivel del mercado laboral.</p>
           <div class="stat-row">
-            <div class="stat-box" style="border-color: rgba(16,185,129,0.4);">
-              <div class="stat-num" style="color:#10b981;">Regional</div>
-              <div class="stat-label">Transformación digital del Magdalena Medio</div>
+            <div class="stat-box" style="border-color:rgba(245,158,11,0.4);">
+              <div class="stat-num" style="color:#f59e0b;">Regional</div>
+              <div class="stat-label">Transformación digital del Magdalena Medio: +60 empresas necesitan ingenieros</div>
             </div>
-            <div class="stat-box" style="border-color: rgba(0,229,255,0.4);">
+            <div class="stat-box" style="border-color:rgba(0,229,255,0.4);">
               <div class="stat-num" style="color:#00e5ff;">Nacional</div>
-              <div class="stat-label">120K+ vacantes sin cubrir en Colombia</div>
+              <div class="stat-label">120.000 vacantes sin cubrir al año en Colombia</div>
             </div>
-            <div class="stat-box" style="border-color: rgba(245,158,11,0.4);">
-              <div class="stat-num" style="color:#f59e0b;">Global</div>
-              <div class="stat-label">Trabajo remoto sin límites geográficos</div>
+            <div class="stat-box" style="border-color:rgba(16,185,129,0.4);">
+              <div class="stat-num" style="color:#10b981;">Global</div>
+              <div class="stat-label">Trabajo remoto sin límites: hasta $9.000 USD/mes desde Colombia</div>
             </div>
           </div>
-          <p class="slide-text" style="margin-top:28px; text-align:center; font-size:18px;">
-            🚀 <strong>La tecnología no tiene fronteras. Tu carrera tampoco.</strong>
-          </p>
-          <p class="slide-text" style="text-align:center; font-size:14px; opacity:0.6; margin-top:12px;">
-            UNIPAZ · Ingeniería Informática · Perfil del Ingeniero y su Mercado Laboral
+          <p class="slide-text" style="margin-top:28px; text-align:center; font-size:20px; font-weight:600; color:#10b981;">
+            "La tecnología no tiene fronteras. Tu carrera tampoco."
           </p>
         `
       }
@@ -1412,63 +1488,66 @@ const FATE_SEGMENTS = [
 
 const QUESTIONS = {
   easy: [
-    // — GABRIEL —
-    { q: '¿Qué significa TI?', a: 'Tecnología de la Información' },
-    { q: '¿Qué cargo del Ingeniero Informático se encarga de proteger los activos de información de una organización?', a: 'Gestor de Seguridad de la Información' },
-    { q: '¿Qué cargo del Ingeniero Informático diseña e implementa sistemas de almacenamiento de datos?', a: 'Diseñador y Administrador de Bases de Datos' },
-    // — FREDY —
+    // — GABRIEL (Presentación) —
+    { q: '¿Qué significa la sigla TI?', a: 'Tecnología de la Información' },
+    { q: '¿Qué es UNIPAZ?', a: 'El Instituto Universitario de la Paz, ubicado en Barrancabermeja, Santander' },
+    // — CAMILO CONTRERAS (Visión & Misión) —
     { q: '¿En qué año busca consolidarse UNIPAZ como líder en formación tecnológica regional?', a: '2031' },
-    { q: '¿Cuánto creció el número de vacantes TI en el Magdalena Medio en los últimos 3 años?', a: '35%' },
-    { q: '¿Cuántas empresas en la región tienen necesidad de profesionales informáticos?', a: 'Más de 60 empresas' },
-    // — CAMILO —
-    { q: '¿Cuál es el porcentaje de crecimiento anual del sector TI en Colombia?', a: '12% anual' },
+    { q: '¿Cuáles son las 3 responsabilidades que definen el actuar del Ingeniero Informático de UNIPAZ?', a: 'Responsabilidad disciplinar, social y ética' },
+    { q: '¿Qué cargo del Ingeniero Informático se encarga de proteger los activos de información?', a: 'Gestor de Seguridad de la Información' },
+    { q: '¿Qué cargo diseña, implementa y administra sistemas de almacenamiento de datos?', a: 'Diseñador y Administrador de Bases de Datos' },
+    // — FREDY (Nacional) —
+    { q: '¿Cuánto crece el sector TI en Colombia cada año?', a: '12% anual' },
     { q: '¿Qué ciudad colombiana es conocida como el "Silicon Valley" del país?', a: 'Medellín (Valle del Software)' },
-    // — DANIEL —
+    // — CAMILO MENDOZA (Regional) —
+    { q: '¿Cuánto creció el número de vacantes TI en el Magdalena Medio en los últimos 3 años?', a: '35%' },
+    { q: '¿Cuántas empresas en la región del Magdalena Medio necesitan profesionales informáticos?', a: 'Más de 60 empresas' },
+    // — LIBARDO (Internacional) —
     { q: '¿Cuál es el salario promedio mensual en USD trabajando remotamente para Latinoamérica?', a: '$2.000 USD/mes' },
-    { q: '¿Qué países europeos son los destinos más accesibles para el ingeniero colombiano?', a: 'España y Alemania' },
+    { q: '¿Cuáles son los dos destinos europeos más accesibles para el Ingeniero Informático colombiano?', a: 'España y Alemania' },
   ],
   medium: [
-    // — GABRIEL —
+    // — CAMILO CONTRERAS —
     { q: '¿Cuáles son los 5 campos ocupacionales del Ingeniero Informático de UNIPAZ?', a: 'Gerente de Desarrollo, Ingeniero de Desarrollo, Gerente de Operaciones, Gestor de Seguridad de la Información, Diseñador/Administrador de Bases de Datos' },
-    { q: '¿Qué condiciones articula el perfil profesional del Ingeniero Informático con su entorno?', a: 'Condiciones políticas, legislativas, socioeconómicas, técnicas y ambientales' },
+    { q: '¿Qué 5 tipos de condiciones articula el perfil profesional del Ingeniero Informático con su entorno?', a: 'Condiciones políticas, legislativas, socioeconómicas, técnicas y ambientales' },
+    { q: '¿Qué busca lograr la Visión 2031 de UNIPAZ en cuanto a proyectos TI?', a: 'Generar propuestas de diseño e implementación de proyectos TI para el mejoramiento continuo del sector productivo y social' },
     // — FREDY —
-    { q: '¿Cuáles son los 3 sectores de la región del Magdalena Medio que demandan ingenieros informáticos?', a: 'Sector industrial (petroleras/agroindustria), sector público (alcaldías/gobernación) y sector salud (clínicas/hospitales)' },
-    { q: '¿Qué tecnologías aplica el Ingeniero Informático en el área rural del Magdalena Medio?', a: 'Sistemas de riego inteligente, trazabilidad de cultivos y conectividad rural' },
-    // — CAMILO —
-    { q: '¿Cuántas vacantes TI quedan sin cubrir cada año en Colombia?', a: '120.000 vacantes al año' },
-    { q: '¿Cuál es el salario promedio del Especialista en Ciberseguridad en Colombia?', a: '$5.000.000 – $8.000.000 COP/mes' },
-    { q: '¿Cuál es el salario promedio del Arquitecto Cloud en Colombia y qué plataformas domina?', a: '$7.000.000 – $12.000.000 COP/mes. Plataformas: AWS, Azure y GCP' },
+    { q: 'Menciona 3 ciudades colombianas con alta demanda de ingenieros informáticos', a: 'Bogotá, Medellín, Cali y Barranquilla (cualquier 3)' },
+    { q: '¿Cuál es el salario promedio del Arquitecto Cloud en Colombia y qué plataformas domina?', a: '$7–12M COP/mes. Plataformas: AWS, Azure y GCP' },
+    { q: '¿Cuál es el salario promedio del Especialista en Ciberseguridad en Colombia?', a: '$5–8M COP/mes' },
     { q: 'Menciona 3 sectores colombianos que más contratan ingenieros informáticos', a: 'Fintech, salud digital, e-commerce, consultoría tecnológica, telecomunicaciones, gobierno digital (cualquier 3)' },
-    // — DANIEL —
+    // — CAMILO MENDOZA —
+    { q: '¿Cuáles son los 3 sectores del Magdalena Medio que demandan ingenieros informáticos?', a: 'Sector industrial (petroleras/agroindustria), sector público (alcaldías/gobernación) y sector salud (clínicas/hospitales)' },
+    { q: '¿Qué tecnologías aplica el Ingeniero Informático en el área rural del Magdalena Medio?', a: 'Sistemas de riego inteligente, trazabilidad de cultivos y conectividad rural' },
+    // — LIBARDO —
+    { q: '¿Cuánto puede ganar un ingeniero colombiano trabajando remotamente para EEUU?', a: '$5.000 – $9.000 USD/mes' },
     { q: '¿Cuáles son las 4 habilidades del futuro más cotizadas globalmente según la exposición?', a: 'Inteligencia Artificial (MLOps/prompts), Cloud & DevOps (Kubernetes/CI-CD), Ciberseguridad global y Soft Skills globales (inglés técnico, Scrum/Kanban)' },
-    { q: '¿Qué plataformas globales conectan ingenieros colombianos con empresas de EEUU y Canadá?', a: 'Toptal y Deel (también Workana, Torre.ai, LinkedIn)' },
+    { q: '¿Qué plataformas conectan ingenieros colombianos con empresas de EEUU y Canadá?', a: 'Toptal y Deel' },
   ],
   hard: [
-    // — GABRIEL —
+    // — CAMILO CONTRERAS —
     { q: '¿Cuál es la diferencia entre el Gerente de Desarrollo y el Ingeniero de Desarrollo según el perfil de UNIPAZ?', a: 'El Gerente planea, dirige y controla procesos de desarrollo bajo estándares de calidad. El Ingeniero analiza y desarrolla software directamente aplicando estándares de la industria.' },
-    { q: 'Explica el perfil profesional completo del Ingeniero Informático de UNIPAZ: qué hace, cómo actúa y qué condiciones articula.', a: 'Diseña, implementa, implanta, asesora y gerencia proyectos TI. Actúa con responsabilidad disciplinar, social y ética. Articula condiciones políticas, legislativas, socioeconómicas, técnicas y ambientales.' },
+    { q: 'Explica completo el perfil del Ingeniero Informático de UNIPAZ: qué hace, cómo actúa y qué condiciones articula', a: 'Diseña, implementa, implanta, asesora y gerencia proyectos TI. Actúa con responsabilidad disciplinar, social y ética. Articula condiciones políticas, legislativas, socioeconómicas, técnicas y ambientales.' },
     // — FREDY —
-    { q: 'Explica por qué Barrancabermeja es considerada un hub tecnológico emergente y qué papel juega el Ingeniero Informático allí.', a: 'Por el crecimiento de startups, centros de datos y expansión de servicios digitales ligados a la industria energética. El ingeniero apoya la digitalización de empresas petroleras y presta servicios TI al sector productivo regional.' },
-    { q: 'Relaciona la Visión 2031 de UNIPAZ con la demanda del mercado laboral del Magdalena Medio.', a: 'La visión busca consolidar UNIPAZ como líder en formación tecnológica regional, generando propuestas TI para mejorar el sector productivo y social, lo que responde directamente a la demanda de más de 60 empresas regionales que necesitan ingenieros para su digitalización.' },
-    // — CAMILO —
-    { q: '¿Cuál es el tamaño del sector TI colombiano en dólares y cuánto crece anualmente? ¿Qué implica esto para un recién egresado?', a: '$6.000 millones de dólares, crece 12% anual. Implica que hay 120.000 vacantes sin cubrir, lo que significa alta demanda y buenos salarios para los nuevos profesionales.' },
-    { q: 'Compara el salario del Científico de Datos/IA con el del DBA en Colombia y explica por qué hay esa diferencia.', a: 'Científico de Datos/IA: $6–10M COP. DBA: $4–7M COP. La diferencia se debe al auge de IA generativa que multiplica la demanda de perfiles analíticos, haciéndolos más escasos y mejor pagados.' },
-    // — DANIEL —
-    { q: '¿Cuánto puede ganar un Ingeniero Informático colombiano trabajando remotamente para EEUU y qué necesita para lograrlo?', a: '$5.000 – $9.000 USD/mes. Necesita inglés técnico y certificaciones como AWS, Google Cloud o CompTIA. El mercado norteamericano tiene déficit de más de 1,2 millones de ingenieros TI.' },
-    { q: '¿Qué certificaciones de ciberseguridad mencionadas en la exposición abren puertas en el mercado global y a qué nivel aplica cada una?', a: 'CISSP (nivel experto/gestión), CEH (ethical hacking/ofensivo) y CompTIA Security+ (nivel entrada/fundamentos). Todas son reconocidas internacionalmente.' },
+    { q: '¿Cuántas vacantes TI quedan sin cubrir cada año en Colombia y cuánto vale el sector en dólares?', a: '120.000 vacantes al año. El sector TI colombiano vale $6.000 millones de dólares.' },
+    { q: 'Compara el salario del Científico de Datos/IA con el del DBA en Colombia y explica por qué hay diferencia', a: 'Científico de Datos/IA: $6–10M COP. DBA: $4–7M COP. La diferencia se debe al auge de IA generativa que multiplica la demanda de perfiles analíticos, haciéndolos más escasos y mejor pagados.' },
+    // — CAMILO MENDOZA —
+    { q: 'Explica por qué Barrancabermeja es considerada un hub tecnológico emergente y qué papel juega el Ingeniero Informático allí', a: 'Por el crecimiento de startups, centros de datos y expansión de servicios digitales ligados a la industria energética. El ingeniero apoya la digitalización y presta servicios TI al sector productivo regional.' },
+    { q: 'Relaciona la Visión 2031 de UNIPAZ con la demanda del mercado laboral del Magdalena Medio', a: 'La visión busca consolidar UNIPAZ como líder generando propuestas TI para mejorar el sector productivo y social, respondiendo a la demanda de más de 60 empresas regionales que necesitan ingenieros para su digitalización.' },
+    // — LIBARDO —
+    { q: '¿Qué necesita el Ingeniero Informático colombiano para acceder al mercado norteamericano y cuál es el déficit de ingenieros allí?', a: 'Necesita inglés técnico y certificaciones como AWS, Google Cloud o CompTIA. El mercado norteamericano tiene un déficit de más de 1,2 millones de ingenieros TI.' },
+    { q: '¿Qué certificaciones de ciberseguridad mencionadas en la exposición abren puertas globalmente?', a: 'CISSP, CEH y CompTIA Security+' },
   ]
 };
 
 const DARES = [
-  '¡Canta una estrofa de tu canción favorita! 🎤',
-  '¡Imita a un profesor de la universidad durante 30 segundos! 👨‍🏫',
-  '¡Di 5 trabalenguas en menos de 10 segundos! 👅',
-  '¡Haz 10 sentadillas frente a todos! 🏋️',
-  '¡Cuenta un chiste (bueno o malo)! 😄',
-  '¡Di el abecedario al revés! 🔤',
-  '¡Imita el sonido de 3 animales diferentes! 🐄🐔🦆',
-  '¡Baila 15 segundos sin música! 💃',
-  '¡Describe tu comida favorita sin usar las manos ni palabras, solo mímica! 🤫',
+  '🎤 ¡Canta una estrofa de tu canción favorita!',
+  '👨‍🏫 ¡Imita a un profesor de la universidad durante 30 segundos!',
+  '💪 ¡Haz 10 flexiones en frente de todos!',
+  '😄 ¡Cuenta un chiste! (Si la gente se ríe: +1 punto extra, si no: -1)',
+  '🔤 ¡Di el abecedario al revés!',
+  '🕵️ ¡El anfitrión te dirá una palabra y tú tienes que hacer que tu grupo la adivine sin usarla!',
+  '🎨 ¡Dibuja en el tablero lo primero que te llegue a la cabeza!',
 ];
 
 function playerColors() {
@@ -1612,7 +1691,7 @@ function showModal(fate) {
     titleEl.textContent = `¡Penitencia para ${selectedPlayer}!`;
     textEl.textContent = dare;
     actEl.innerHTML = `
-      <button class="modal-btn correct" onclick="awardPts(0); closeModal()">✓ ¡LA CUMPLIÓ!</button>
+      <button class="modal-btn correct" onclick="awardPts(1); closeModal()">✓ ¡LA CUMPLIÓ! (+1)</button>
       <button class="modal-btn wrong"   onclick="awardPts(-1); closeModal()">✗ No la cumplió (-1)</button>
     `;
   } else {
@@ -1623,10 +1702,10 @@ function showModal(fate) {
     typeEl.style.color = colors[fate.type];
     typeEl.textContent = fate.label;
     titleEl.textContent = `Pregunta para ${selectedPlayer}`;
-    textEl.innerHTML = `<strong style="font-size:18px;">${q.q}</strong><br><br><span style="opacity:0.65; font-size:14px; font-family:'Space Mono',monospace;">Respuesta: ${q.a}</span>`;
+    textEl.innerHTML = `<strong style="font-size:20px;">${q.q}</strong>`;
     actEl.innerHTML = `
       <button class="modal-btn correct" onclick="awardPts(${pts}); closeModal()">✓ CORRECTO (+${pts})</button>
-      <button class="modal-btn wrong"   onclick="awardPts(0); closeModal()">✗ Incorrecta (0)</button>
+      <button class="modal-btn wrong"   onclick="awardPts(0); closeModal()">✗ Incorrecta (0 pts)</button>
     `;
   }
 }
@@ -1634,7 +1713,6 @@ function showModal(fate) {
 function awardPts(n) {
   if (selectedPlayer && n !== 0) {
     scores[selectedPlayer] = (scores[selectedPlayer] || 0) + n;
-    if (scores[selectedPlayer] < 0) scores[selectedPlayer] = 0;
   }
   renderScoreboard();
   checkWinner();
